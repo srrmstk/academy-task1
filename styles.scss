@@ -36,14 +36,18 @@ body {
   font-size: 16px;
 }
 
-
 h1 {
-  font-weight: 700;
   font-size: 36px;
+}
+h2{
+  font-size: 32px;
+}
+h3 {
+  font-size: 18px;
 }
 
 button {
-  width: 166px;
+  width: 165px;
   height: 50px;
 }
 
@@ -73,30 +77,16 @@ button {
   }
 }
 
-.logo {
-  display: inline-flex;
-  cursor: pointer;
-  margin-left: 136px;
-  padding: 25px 23px 32px 23px;
-  background: $blue;
-  border-radius: 0 0 22px 22px;
-
-  text-align: center;
-  color: $white;
-  font-size: 36px;
-  font-weight: 700;
-
-}
-
 header {
   .waves {
     position: absolute;
     box-shadow: -7px -7px 32px rgba(0, 30, 67, 0.06);
     width: 100%;
-    z-index: -1;
+    z-index: -999;
   }
 
   .promo {
+    margin-top: 88px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,7 +116,7 @@ header {
       font-weight: 500;
       text-decoration: none;
       color: $gray;
-      padding-right: 40px;
+      margin-right: 40px;
 
       &.active {
         color: $blue;
@@ -137,11 +127,110 @@ header {
       margin-left: 12px;
       margin-right: 140px;
       background-color: $dark-blue;
+      border: 2px solid $dark-blue;
+
+      &:hover {
+        color: $dark-blue;
+        background-color: $white;
+      }
     }
   }
 
-  .devices{
-    display: flex;
-    margin-top: 108px;
+  .devices {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-right: -50%;
+    margin-top: 66px;
+    z-index: -3;
+  }
+}
+
+main {
+  margin-top: 600px;
+}
+
+.logo {
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 136px;
+  padding: 25px 23px 32px 23px;
+  background: $blue;
+  border-radius: 0 0 22px 22px;
+
+  text-align: center;
+  color: $white;
+  font-size: 36px;
+  font-weight: 700;
+
+}
+
+.scrollDown {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-right: -50%;
+  top: 972px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-template-areas: '. c1 c2 c3 .';
+  text-align: center;
+  background-color: #F5FCFD;
+  padding-bottom: 130px;
+
+  .card {
+    margin-top: 165px;
+    width: 362px;
+    height: 290px;
+    box-shadow: 0 4px 16px rgba(0, 66, 148, 0.08);
+    border-radius: 5px;
+
+    &:first-child {
+      grid-area: c1;
+    }
+
+    &:nth-child(2) {
+      grid-area: c2;
+      margin-top: 215px;
+    }
+
+    &:last-child {
+      grid-area: c3;
+    }
+
+    h3 {
+      padding-bottom: 25px;
+    }
+
+    p {
+      width: 333px;
+    }
+
+    img {
+      padding-top: 40px;
+      padding-bottom: 25px;
+    }
+  }
+
+
+}
+
+.about {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template: '.';
+
+  .messaging {
+
+  }
+
+  .keepintouch {
+
   }
 }
