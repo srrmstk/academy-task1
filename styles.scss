@@ -1,0 +1,147 @@
+//color definitions
+$blue: #0F7BFF;
+$dark-blue: #0063DD;
+$gray: #929292;
+$white: #FFFFFF;
+
+//animations
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 100
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 100
+  }
+}
+
+* {
+  margin: 0 auto;
+}
+
+body {
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  background: $white;
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+button {
+  width: 166px;
+  height: 50px;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  color: $blue;
+  background-color: $white;
+  border: 2px solid $blue;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+}
+
+.blue {
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    color: $blue;
+    background-color: $white;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 136px;
+  padding: 25px 23px 32px 23px;
+  background: $blue;
+  border-radius: 0 0 22px 22px;
+
+  text-align: center;
+  color: $white;
+  font-size: 36px;
+  font-weight: 700;
+
+}
+
+header {
+  .waves {
+    position: absolute;
+    box-shadow: -7px -7px 32px rgba(0, 30, 67, 0.06);
+    width: 100%;
+    z-index: -1;
+  }
+
+  .promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 655px;
+    height: 239px;
+
+    h1 {
+      padding-bottom: 30px;
+    }
+
+    p {
+      color: $gray;
+      padding-bottom: 33px;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    padding-top: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      color: $gray;
+      padding-right: 40px;
+
+      &.active {
+        color: $blue;
+      }
+    }
+
+    .button {
+      margin-left: 12px;
+      margin-right: 140px;
+      background-color: $dark-blue;
+    }
+  }
+
+  .devices{
+    display: flex;
+    margin-top: 108px;
+  }
+}

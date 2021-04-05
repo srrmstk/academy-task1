@@ -1,0 +1,125 @@
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+* {
+  margin: 0 auto;
+}
+
+body {
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  background: #FFFFFF;
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+button {
+  width: 166px;
+  height: 50px;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  color: #0F7BFF;
+  background-color: #FFFFFF;
+  border: 2px solid #0F7BFF;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button:hover {
+  color: #FFFFFF;
+  background-color: #0F7BFF;
+}
+
+.blue {
+  color: #FFFFFF;
+  background-color: #0F7BFF;
+}
+.blue:hover {
+  color: #0F7BFF;
+  background-color: #FFFFFF;
+}
+
+.logo {
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 136px;
+  padding: 25px 23px 32px 23px;
+  background: #0F7BFF;
+  border-radius: 0 0 22px 22px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+header .waves {
+  position: absolute;
+  box-shadow: -7px -7px 32px rgba(0, 30, 67, 0.06);
+  width: 100%;
+  z-index: -1;
+}
+header .promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 655px;
+  height: 239px;
+}
+header .promo h1 {
+  padding-bottom: 30px;
+}
+header .promo p {
+  color: #929292;
+  padding-bottom: 33px;
+}
+header .menu {
+  position: absolute;
+  right: 0;
+  padding-top: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .menu a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #929292;
+  padding-right: 40px;
+}
+header .menu a.active {
+  color: #0F7BFF;
+}
+header .menu .button {
+  margin-left: 12px;
+  margin-right: 140px;
+  background-color: #0063DD;
+}
+header .devices {
+  display: flex;
+  margin-top: 108px;
+}
+
+/*# sourceMappingURL=styles.css.map */
