@@ -10,6 +10,8 @@
     <!--  google fonts below  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--  Carousel   -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
 <header>
@@ -17,12 +19,12 @@
     <nav>
         <div class="logo">AppSon</div>
         <span class="menu">
-            <a class="active" href="#">HOME</a>
-            <a href="#">FEATURES</a>
-            <a href="#">PRICING</a>
-            <a href="#">PAGES</a>
-            <button class="button blue">SIGN UP</button>
-        </span>
+                <a class="active" href="#">HOME</a>
+                <a href="#">FEATURES</a>
+                <a href="#">PRICING</a>
+                <a href="#">PAGES</a>
+                <button class="button blue">SIGN UP</button>
+            </span>
     </nav>
     <div class="promo">
         <h1>Best Desktop App for You</h1>
@@ -30,9 +32,9 @@
             dolore magna aliqua. adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua.</p>
         <span>
-            <button class="button blue">Download</button>
-            <button class="button">Free Trial</button>
-        </span>
+                <button class="button blue">Download</button>
+                <button class="button">Free Trial</button>
+            </span>
     </div>
     <img class="devices" src="img/Devices.png" alt="">
     <img class="scrollDown" src="img/ScrollDown.png" alt="">
@@ -59,48 +61,202 @@
         </div>
     </section>
     <section class="about">
-        <div class="messaging">
-            <img src="img/Screen1.png" alt="">
-            <div>
+        <div class="container">
+            <div class="figure figure-1"></div>
+            <img class="img1" src="img/Screen1.png" alt="">
+            <div class="messaging">
                 <h2>Easy Messaging</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <div class="readMore">
+                    <div>Read More</div>
+                    <img src="img/svg/Arrow2.svg" alt="">
+                </div>
             </div>
-
-        </div>
-        <div class="keepintouch">
-            <div>
+            <div class="keepInTouch">
                 <h2>Keep In Touch</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <div class="readMore">
+                    <div>Read More</div>
+                    <img src="img/svg/Arrow2.svg" alt="">
+                </div>
             </div>
-            <img src="img/Screen2.png" alt="">
+            <img class="img2" src="img/Screen2.png" alt="">
+            <div class="figure figure-2"></div>
         </div>
     </section>
     <section class="instruction">
+        <div class="title">
+            <h2>How Does It Works?</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet. </p>
+        </div>
+        <div class="cards">
+            <img class="line" src="img/svg/Line.svg" alt="">
+            <div class="card">
+                <img src="img/AccountIcon.png" alt="">
+                <h3>Create An Account</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+            </div>
+            <div class="card">
+                <img src="img/EmailIcon.png" alt="">
+                <h3>Confirm Email</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+            </div>
+            <div class="card">
+                <img src="img/ResultsIcon.png" alt="">
+                <h3>See Results</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+            </div>
+        </div>
 
     </section>
-    <section class="pricing">
-
+    <section class="plans">
+        <div class="container">
+            <div class="pricing">
+                <h2>Pricing Plan</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                <div class="toggle">
+                    <div class="item">
+                        <input id="radio1" type="radio" name="freq" checked>
+                        <label for="radio1">Monthly</label>
+                    </div>
+                    <div class="item">
+                        <input id="radio2" type="radio" name="freq">
+                        <label for="radio2">Yearly</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/PremiumIcon.png" alt="">
+                <h3>Premium</h3>
+                <hr>
+                <ul>
+                    <li>2gb Hosting</li>
+                    <li>10 Custom Domain</li>
+                    <li>SSD Hosting</li>
+                    <li>50 gb Bandwith</li>
+                    <li>Free Support</li>
+                </ul>
+                <div class="price"><span class="dollarSign">$</span>49.00</div>
+                <button class="button blue">Try Now</button>
+            </div>
+            <div class="card">
+                <img src="img/StandartIcon.png" alt="">
+                <h3>Standart</h3>
+                <hr>
+                <ul>
+                    <li>2gb Hosting</li>
+                    <li>10 Custom Domain</li>
+                    <li>SSD Hosting</li>
+                    <li>50 gb Bandwith</li>
+                    <li>Free Support</li>
+                </ul>
+                <div class="price"><span class="dollarSign">$</span>19.00</div>
+                <button class="button">Try Now</button>
+            </div>
+        </div>
     </section>
     <section class="testimonials">
-
+        <img src="img/Testimonial.png" alt="">
+        <h2>Trusted By More Than 55M Peoples</h2>
+        <div class="swiper-container carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide item">
+                    <img src="img/svg/TwitterIcon.svg" alt="">
+                    <h3>Raisa Moni</h3>
+                    <h5>Envato Customer</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        etamet.</p>
+                </div>
+                <div class="swiper-slide item">
+                    <h3>Raisa Moni</h3>
+                    <h5>Envato Customer</h5>
+                    <img src="img/svg/TwitterIcon.svg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        etamet.</p>
+                </div>
+                <div class="swiper-slide item">
+                    <h3>Raisa Moni</h3>
+                    <h5>Envato Customer</h5>
+                    <img src="img/svg/TwitterIcon.svg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        etamet.</p>
+                </div>
+                <div class="swiper-slide item">
+                    <h3>Raisa Moni</h3>
+                    <h5>Envato Customer</h5>
+                    <img src="img/svg/TwitterIcon.svg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        etamet.</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
     <section class="latest-news">
+        <div class="title">
+            <h2>Latest News From Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="posts">
+            <div class="post post-main">
+                <img src="" alt="">
+                <h3>The master bedroom suite is phenomenally spacious</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="post">
+                <img src="" alt="">
+                <h3>The master bedroom suite is phenomenally spacious</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="post">
+                <img src="" alt="">
+                <h3>The master bedroom suite is phenomenally spacious</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="post">
+                <img src="" alt="">
+                <h3>The master bedroom suite is phenomenally spacious</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
 
     </section>
     <section class="free-trial">
-
+        <div>
+            <h2>Try 30 Days Free Trial</h2>
+            <p>No credit card required</p>
+        </div>
+        <button>Get Started</button>
     </section>
 </main>
 <footer>
 
 </footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="src/index.js"></script>
 </body>
 </html>
