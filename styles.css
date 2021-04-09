@@ -73,6 +73,9 @@ button {
   background-color: #FFFFFF;
 }
 
+header .container {
+  max-width: 1644px;
+}
 header .waves {
   position: absolute;
   box-shadow: -7px -7px 32px rgba(0, 30, 67, 0.06);
@@ -104,6 +107,7 @@ header .menu {
   position: absolute;
   right: 0;
   padding-top: 25px;
+  margin-right: 140px;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -119,7 +123,6 @@ header .menu a.active {
 }
 header .menu .button {
   margin-left: 12px;
-  margin-right: 140px;
   font-size: 16px;
   background-color: #0063DD;
   border: 2px solid #0063DD;
@@ -134,15 +137,17 @@ header .devices {
   transform: translate(-51%, 0);
   margin-right: -50%;
   margin-top: 68px;
+  width: 100%;
   z-index: -3;
+  max-width: 870px;
 }
 header .logo {
   display: inline-flex;
   cursor: pointer;
-  margin-left: 136px;
   padding: 25px 23px 32px 23px;
   background: #0F7BFF;
   border-radius: 0 0 22px 22px;
+  max-width: 179px;
   text-align: center;
   color: #FFFFFF;
   font-size: 36px;
@@ -154,10 +159,49 @@ header .scrollDown {
   transform: translate(-50%, 0);
   margin-right: -50%;
   top: 972px;
+  max-width: 114px;
 }
 
+@media (max-width: 1440px) {
+  header .container {
+    width: 970px;
+  }
+  header .logo {
+    font-size: 22px;
+  }
+  header .promo {
+    margin-top: 32px;
+    width: 470px;
+    height: 220px;
+  }
+  header .promo .button:first-child {
+    margin-right: 26px;
+  }
+  header .promo h1 {
+    padding-bottom: 20px;
+  }
+  header .promo p {
+    padding-bottom: 8px;
+  }
+  header .menu {
+    margin-right: 60px;
+  }
+  header .devices {
+    max-width: 470px;
+    margin-top: -10px;
+  }
+  header .scrollDown {
+    top: 594px;
+    max-width: 64px;
+  }
+}
 main {
   margin-top: 600px;
+}
+@media (max-width: 1440px) {
+  main {
+    margin-top: 290px;
+  }
 }
 main .features {
   text-align: center;
@@ -204,7 +248,11 @@ main .features .container .card img {
     max-width: 970px;
   }
   main .features .container .card {
+    margin-top: 60px;
     width: 300px;
+  }
+  main .features .container .card:nth-child(2) {
+    margin-top: 100px;
   }
   main .features .container .card p {
     width: 220px;
@@ -494,6 +542,9 @@ main .plans .card .price {
 main .testimonials {
   background-color: #F5FCFD;
 }
+main .testimonials .bigPicture {
+  max-width: 779px;
+}
 main .testimonials img {
   float: left;
 }
@@ -547,6 +598,38 @@ main .testimonials .carousel .swiper-pagination-bullet-active {
   width: 38px;
   background: #0063DD;
   border-radius: 32px;
+}
+@media (max-width: 1440px) {
+  main .testimonials .bigPicture {
+    max-width: 590px;
+  }
+  main .testimonials .carousel {
+    margin-left: 668px;
+  }
+  main .testimonials .carousel .swiper-pagination {
+    left: -280px;
+    padding-left: 1px;
+  }
+  main .testimonials h2 {
+    padding-top: 68px;
+    padding-left: 676px;
+  }
+}
+@media (max-width: 992px) {
+  main .testimonials .bigPicture {
+    display: none;
+  }
+  main .testimonials .carousel {
+    margin-left: 0;
+  }
+  main .testimonials .carousel .swiper-pagination {
+    display: none;
+  }
+  main .testimonials h2 {
+    text-align: center;
+    padding-top: 68px;
+    padding-left: 0;
+  }
 }
 main .latest-news {
   text-align: center;
@@ -724,6 +807,28 @@ footer .bottom .icons {
 }
 footer .bottom .icons img {
   padding-right: 0;
+}
+
+@media (max-width: 1440px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  button {
+    transform: scale(0.7);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

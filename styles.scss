@@ -85,6 +85,10 @@ button {
 }
 
 header {
+  .container {
+    max-width: 1644px;
+  }
+
   .waves {
     position: absolute;
     box-shadow: -7px -7px 32px rgba(0, 30, 67, 0.06);
@@ -121,6 +125,7 @@ header {
     position: absolute;
     right: 0;
     padding-top: 25px;
+    margin-right: 140px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -138,7 +143,6 @@ header {
 
     .button {
       margin-left: 12px;
-      margin-right: 140px;
       font-size: 16px;
       background-color: $dark-blue;
       border: 2px solid $dark-blue;
@@ -156,17 +160,19 @@ header {
     transform: translate(-51%, 0);
     margin-right: -50%;
     margin-top: 68px;
+    width: 100%;
     z-index: -3;
+
+    max-width: 870px;
   }
 
   .logo {
     display: inline-flex;
     cursor: pointer;
-    margin-left: 136px;
     padding: 25px 23px 32px 23px;
     background: $blue;
     border-radius: 0 0 22px 22px;
-
+    max-width: 179px;
     text-align: center;
     color: $white;
     font-size: 36px;
@@ -180,11 +186,60 @@ header {
     transform: translate(-50%, 0);
     margin-right: -50%;
     top: 972px;
+    max-width: 114px;
+  }
+}
+
+@media (max-width: 1440px) {
+  header {
+    .container {
+      width: 970px;
+    }
+
+    .logo {
+      font-size: 22px;
+    }
+
+    .promo {
+      margin-top: 32px;
+      width: 470px;
+      height: 220px;
+
+      .button:first-child {
+        margin-right: 26px;
+      }
+
+      h1 {
+        padding-bottom: 20px;
+      }
+
+      p {
+        padding-bottom: 8px;
+      }
+    }
+
+    .menu {
+      margin-right: 60px;
+    }
+
+    .devices {
+      max-width: 470px;
+      margin-top: -10px;
+    }
+
+    .scrollDown {
+      top: 594px;
+      max-width: 64px;
+    }
+
   }
 }
 
 main {
   margin-top: 600px;
+  @media (max-width: 1440px) {
+    margin-top: 290px;
+  }
 
   //----------------
   .features {
@@ -242,7 +297,12 @@ main {
         max-width: 970px;
 
         .card {
+          margin-top: 60px;
           width: 300px;
+
+          &:nth-child(2) {
+            margin-top: 100px;
+          }
 
           p {
             width: 220px;
@@ -298,6 +358,7 @@ main {
     padding-top: 60px;
 
     .container {
+      //width: 1162px;
       margin-right: 105px;
       display: grid;
       grid-template-rows: 1fr 1fr;
@@ -607,6 +668,10 @@ main {
   .testimonials {
     background-color: #F5FCFD;
 
+    .bigPicture {
+      max-width: 779px;
+    }
+
     img {
       float: left;
     }
@@ -671,6 +736,52 @@ main {
       }
     }
   }
+
+  @media (max-width: 1440px) {
+    .testimonials {
+      .bigPicture {
+        max-width: 590px;
+      }
+
+      .carousel {
+        margin-left: 668px;
+
+        .swiper-pagination {
+          left: -280px;
+          padding-left: 1px;
+        }
+      }
+
+      h2 {
+        padding-top: 68px;
+        padding-left: 676px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .testimonials {
+      .bigPicture {
+        display: none;
+      }
+
+      .carousel {
+        //margin-left: 668px;
+        margin-left: 0;
+
+        .swiper-pagination {
+          display: none;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        padding-top: 68px;
+        padding-left: 0;
+      }
+    }
+  }
+
 
   .latest-news {
     text-align: center;
@@ -890,4 +1001,30 @@ footer {
 
 
   }
+}
+
+@media (max-width: 1440px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  body {
+    font-size: 14px;
+  }
+  button {
+    transform: scale(.7);
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 767px) {
+
 }
