@@ -213,14 +213,104 @@ header .scrollDown {
   }
 }
 @media (max-width: 1024px) {
+  .menu-btn-wrapper {
+    position: absolute;
+    right: 10px;
+    z-index: 100;
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    transition: all 0.5s;
+    z-index: 100;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+    z-index: 100;
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+    z-index: 100;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: #FFFFFF;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    z-index: 80;
+    margin-right: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu.active {
+    transform: translateY(0);
+  }
+
+  .menu.menu-btn.active {
+    z-index: 100;
+  }
+
+  .menu-btn.active span:first-of-type {
+    transform: translateX(100%);
+    background-color: #000000;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #000000;
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: #000000;
+  }
+
   header .scrollDown {
     display: none;
+  }
+  header .menu {
+    text-align: center;
+    margin-right: 0;
+  }
+  header .menu a {
+    margin: 0;
+  }
+  header .menu .button {
+    margin: 0;
   }
   header .devices {
     display: none;
   }
 }
 @media (max-width: 768px) {
+  .menu-btn span {
+    background-color: #000000;
+  }
+
   header .container {
     width: 300px;
   }
@@ -434,10 +524,24 @@ main .about .container .figure-2 {
 main .about .container img {
   z-index: 1;
 }
+@media (max-width: 1660px) {
+  main .about .container .figure-1 {
+    left: 330px;
+  }
+  main .about .container .figure-2 {
+    left: 940px;
+  }
+}
 @media (max-width: 1440px) {
   main .about .container {
     width: 1200px;
     grid-row-gap: 130px;
+  }
+  main .about .container .figure-1 {
+    display: none;
+  }
+  main .about .container .figure-2 {
+    display: none;
   }
 }
 @media (max-width: 1300px) {
@@ -1088,7 +1192,7 @@ main .free-trial {
   margin-top: 104px;
   background-color: #F5FCFD;
   padding-top: 133px;
-  padding-bottom: 118px;
+  padding-bottom: 117px;
 }
 main .free-trial .container {
   display: grid;
@@ -1189,26 +1293,29 @@ footer .formGroup .inputButton :hover {
 }
 footer .bottom {
   background-color: #0063DD;
-  padding-top: 52px;
-  padding-bottom: 44px;
-  display: flex;
   color: #FFFFFF;
 }
+footer .bottom .container {
+  padding-left: 387px;
+  display: flex;
+  align-items: center;
+  height: 125px;
+  width: 1375px;
+}
 footer .bottom .up {
-  padding-bottom: 0;
+  margin-right: 80px;
 }
 footer .bottom .copyright {
-  margin-left: 387px;
+  margin-left: -79px;
   font-weight: 300;
   line-height: 150%;
 }
 footer .bottom .links {
-  margin-left: 117px;
-  margin-right: 116px;
-  display: flex;
+  margin-right: 91px;
 }
 footer .bottom .links div {
-  padding-right: 37px;
+  padding-right: 40px;
+  display: inline-block;
 }
 footer .bottom .links div:last-child {
   padding-right: 0;
@@ -1219,9 +1326,44 @@ footer .bottom .icons {
   padding-right: 40px;
 }
 footer .bottom .icons img {
-  padding-right: 16px;
+  padding-right: 15px;
 }
 
+@media (max-width: 1700px) {
+  footer .bottom .up {
+    margin-right: 0;
+  }
+  footer .bottom .container {
+    width: 1200px;
+  }
+}
+@media (max-width: 1600px) {
+  footer .bottom .container {
+    padding-left: 0;
+    width: 1030px;
+  }
+}
+@media (max-width: 1225px) {
+  footer .bottom .container {
+    width: 750px;
+  }
+  footer .bottom .container .links {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  footer .formGroup .inputButton {
+    transform: scale(1);
+  }
+}
+@media (max-width: 997px) {
+  footer .bottom .container {
+    width: 700px;
+  }
+  footer .bottom .up {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   h1 {
     font-size: 28px;
