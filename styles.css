@@ -162,6 +162,16 @@ header .scrollDown {
   max-width: 114px;
 }
 
+@media (max-width: 1919px) {
+  header .devices {
+    max-width: 470px;
+    margin-top: 40px;
+  }
+  header .scrollDown {
+    top: 747px;
+    max-width: 64px;
+  }
+}
 @media (max-width: 1440px) {
   header .container {
     width: 1200px;
@@ -188,7 +198,7 @@ header .scrollDown {
   }
   header .devices {
     max-width: 470px;
-    margin-top: -10px;
+    margin-top: 20px;
   }
   header .scrollDown {
     top: 594px;
@@ -329,6 +339,11 @@ header .scrollDown {
 }
 main {
   margin-top: 600px;
+}
+@media (max-width: 1919px) {
+  main {
+    margin-top: 350px;
+  }
 }
 @media (max-width: 1440px) {
   main {
@@ -1362,6 +1377,34 @@ footer .bottom .icons img {
   }
   footer .bottom .up {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  footer h1 {
+    font-size: 20px;
+  }
+  footer .formGroup input[type=email] {
+    width: 130px;
+  }
+  footer .formGroup .inputButton {
+    width: 120px;
+    font-size: 14px;
+  }
+  footer .bottom .container {
+    width: 280px;
+  }
+  footer .bottom .container img {
+    transform: scale(0.5);
+  }
+  footer .bottom .container .copyright {
+    margin-left: 0;
+  }
+  footer .bottom .container .icons {
+    padding-right: 0;
+    width: 24px;
+  }
+  footer .bottom .container .links div {
+    padding-right: 0;
   }
 }
 @media (max-width: 1200px) {
